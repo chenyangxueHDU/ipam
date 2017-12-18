@@ -1,4 +1,4 @@
-package common
+package cache
 
 import (
 	"testing"
@@ -12,7 +12,7 @@ func TestGetConn(t *testing.T) {
 		t.Fail()
 	}
 
-	conn.Do(`set`, `d`, []byte{1,0,0})
+	conn.Do(`set`, `d`, 1<<2)
 
 	s, e := redis.String(conn.Do(`get`, `d`))
 

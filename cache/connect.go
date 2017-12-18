@@ -1,4 +1,4 @@
-package common
+package cache
 
 import (
 	"github.com/garyburd/redigo/redis"

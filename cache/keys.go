@@ -1,4 +1,4 @@
-package common
+package cache
 
 const (
 	KeyPoolData = `pool:data:%s`

@@ -2,18 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="116ad42d-1f5c-42fb-8faf-bb4c539a6d17" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/common/keys.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/cache/bitmap.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/ipams/errors.go" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/ipams/redis/cache.go" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ipams/redis/connect.go" afterPath="$PROJECT_DIR$/common/connect.go" />
-      <change beforePath="$PROJECT_DIR$/ipams/redis/connect_test.go" afterPath="$PROJECT_DIR$/common/connect_test.go" />
-      <change beforePath="$PROJECT_DIR$/ipams/redis/errors.go" afterPath="$PROJECT_DIR$/common/errors.go" />
-      <change beforePath="$PROJECT_DIR$/ipams/redis/ipam.go" afterPath="$PROJECT_DIR$/ipams/ipam.go" />
-      <change beforePath="$PROJECT_DIR$/ipams/redis/ipam_test.go" afterPath="$PROJECT_DIR$/ipams/ipam_test.go" />
-      <change beforePath="$PROJECT_DIR$/ipams/redis/queue.go" afterPath="$PROJECT_DIR$/common/queue.go" />
+      <change beforePath="$PROJECT_DIR$/common/bitmap.go" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/common/connect.go" afterPath="$PROJECT_DIR$/cache/connect.go" />
+      <change beforePath="$PROJECT_DIR$/common/connect_test.go" afterPath="$PROJECT_DIR$/cache/connect_test.go" />
+      <change beforePath="$PROJECT_DIR$/common/errors.go" afterPath="$PROJECT_DIR$/cache/errors.go" />
+      <change beforePath="$PROJECT_DIR$/common/keys.go" afterPath="$PROJECT_DIR$/cache/keys.go" />
+      <change beforePath="$PROJECT_DIR$/common/queue.go" afterPath="$PROJECT_DIR$/cache/queue.go" />
+      <change beforePath="$PROJECT_DIR$/ipams/ipam.go" afterPath="$PROJECT_DIR$/ipams/ipam.go" />
+      <change beforePath="$PROJECT_DIR$/ipams/ipam_test.go" afterPath="$PROJECT_DIR$/ipams/ipam_test.go" />
+      <change beforePath="$PROJECT_DIR$/ipams/utils.go" afterPath="$PROJECT_DIR$/ipams/utils.go" />
       <change beforePath="$PROJECT_DIR$/models/dao.go" afterPath="$PROJECT_DIR$/models/dao.go" />
       <change beforePath="$PROJECT_DIR$/models/pool.go" afterPath="$PROJECT_DIR$/models/pool.go" />
-      <change beforePath="$PROJECT_DIR$/models/pool_test.go" afterPath="$PROJECT_DIR$/models/pool_test.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,94 +26,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pool.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/pool.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="38" column="22" lean-forward="true" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="decode.go" pinned="false" current-in-tab="false">
-        <entry file="file://C:/Go/src/encoding/json/decode.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="95" column="5" lean-forward="false" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ipam.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ipams/ipam.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="755">
-              <caret line="57" column="23" lean-forward="true" selection-start-line="56" selection-start-column="19" selection-end-line="57" selection-end-column="23" />
-              <folding>
-                <element signature="e#14#105#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bitmap.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/bitmap.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="34" lean-forward="false" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="connect.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/connect.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="760">
-              <caret line="47" column="1" lean-forward="true" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="connect_test.go" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/common/connect_test.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ipam_test.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ipams/ipam_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+            <state relative-caret-position="76">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dao.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/dao.go">
+      <file leaf-file-name="ipam.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ipams/ipam.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="27" lean-forward="false" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="encode.go" pinned="false" current-in-tab="false">
-        <entry file="file://C:/Go/src/encoding/json/encode.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="158" column="5" lean-forward="false" selection-start-line="158" selection-start-column="5" selection-end-line="158" selection-end-column="5" />
-              <folding />
+            <state relative-caret-position="589">
+              <caret line="70" column="18" lean-forward="false" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
+              <folding>
+                <element signature="e#15#104#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -146,12 +78,14 @@
         <option value="$PROJECT_DIR$/common/cache.go" />
         <option value="$PROJECT_DIR$/common/connect.go" />
         <option value="$PROJECT_DIR$/common/hash.go" />
-        <option value="$PROJECT_DIR$/ipams/ipam_test.go" />
-        <option value="$PROJECT_DIR$/ipams/ipam.go" />
+        <option value="$PROJECT_DIR$/common/connect_test.go" />
+        <option value="$PROJECT_DIR$/common/bitmap.go" />
         <option value="$PROJECT_DIR$/models/dao.go" />
         <option value="$PROJECT_DIR$/models/pool.go" />
-        <option value="$PROJECT_DIR$/common/bitmap.go" />
-        <option value="$PROJECT_DIR$/common/connect_test.go" />
+        <option value="$PROJECT_DIR$/ipams/utils.go" />
+        <option value="$PROJECT_DIR$/ipams/errors.go" />
+        <option value="$PROJECT_DIR$/ipams/ipam_test.go" />
+        <option value="$PROJECT_DIR$/ipams/ipam.go" />
       </list>
     </option>
   </component>
@@ -196,7 +130,7 @@
             <path>
               <item name="ipam" type="b2602c69:ProjectViewProjectNode" />
               <item name="ipam" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="cache" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ipam" type="b2602c69:ProjectViewProjectNode" />
@@ -224,6 +158,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\goproject\src\ipam\ipams" />
       <recent name="D:\goproject\src\ipam\cache" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -244,7 +179,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.TestGetConn in connect_test.go (1)">
+  <component name="RunManager" selected="Go Test.TestRedisIpam_RequestAddress in ipam_test.go">
     <configuration name="TestGetConn in conn_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true">
       <module name="ipam" />
       <working_directory value="$PROJECT_DIR$/cache" />
@@ -289,9 +224,9 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Go Test.TestGetConn in connect_test.go (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Go Test.TestRedisIpam_RequestAddress in ipam_test.go" />
-        <item index="2" class="java.lang.String" itemvalue="Go Test.TestGetConn in conn_test.go" />
+        <item index="0" class="java.lang.String" itemvalue="Go Test.TestRedisIpam_RequestAddress in ipam_test.go" />
+        <item index="1" class="java.lang.String" itemvalue="Go Test.TestGetConn in conn_test.go" />
+        <item index="2" class="java.lang.String" itemvalue="Go Test.TestGetConn in connect_test.go (1)" />
         <item index="3" class="java.lang.String" itemvalue="Go Test.TestGetConn in connect_test.go" />
       </list>
     </recent_temporary>
@@ -300,26 +235,8 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestGetConn_in_conn_test_go - 2017.12.18 at 20h 03m 28s.xml">
+    <history-entry file="TestGetConn_in_conn_test_go - 2017.12.18 at 21h 49m 29s.xml">
       <configuration name="TestGetConn in conn_test.go" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestGetConn_in_conn_test_go - 2017.12.18 at 20h 04m 46s.xml">
-      <configuration name="TestGetConn in conn_test.go" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestGetConn_in_conn_test_go - 2017.12.18 at 20h 05m 26s.xml">
-      <configuration name="TestGetConn in conn_test.go" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestGetConn_in_conn_test_go - 2017.12.18 at 20h 07m 35s.xml">
-      <configuration name="TestGetConn in conn_test.go" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestGetConn_in_conn_test_go - 2017.12.18 at 20h 08m 31s.xml">
-      <configuration name="TestGetConn in conn_test.go" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestGetConn_in_conn_test_go - 2017.12.18 at 20h 13m 32s.xml">
-      <configuration name="TestGetConn in conn_test.go" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestGetConn_in_connect_test_go - 2017.12.18 at 20h 09m 32s.xml">
-      <configuration name="TestGetConn in connect_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
     <history-entry file="TestGetConn_in_connect_test_go_(1) - 2017.12.18 at 21h 00m 08s.xml">
       <configuration name="TestGetConn in connect_test.go (1)" configurationId="GoTestRunConfiguration" />
@@ -327,7 +244,25 @@
     <history-entry file="TestGetConn_in_connect_test_go_(1) - 2017.12.18 at 21h 00m 16s.xml">
       <configuration name="TestGetConn in connect_test.go (1)" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestRedisIpam_RequestAddress_in_ipam_test_go - 2017.12.18 at 20h 31m 33s.xml">
+    <history-entry file="TestGetConn_in_connect_test_go_(1) - 2017.12.18 at 21h 05m 01s.xml">
+      <configuration name="TestGetConn in connect_test.go (1)" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestRedisIpam_RequestAddress_in_ipam_test_go - 2017.12.18 at 21h 49m 54s.xml">
+      <configuration name="TestRedisIpam_RequestAddress in ipam_test.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestRedisIpam_RequestAddress_in_ipam_test_go - 2017.12.18 at 21h 52m 05s.xml">
+      <configuration name="TestRedisIpam_RequestAddress in ipam_test.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestRedisIpam_RequestAddress_in_ipam_test_go - 2017.12.18 at 21h 52m 46s.xml">
+      <configuration name="TestRedisIpam_RequestAddress in ipam_test.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestRedisIpam_RequestAddress_in_ipam_test_go - 2017.12.18 at 21h 53m 30s.xml">
+      <configuration name="TestRedisIpam_RequestAddress in ipam_test.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestRedisIpam_RequestAddress_in_ipam_test_go - 2017.12.18 at 21h 54m 12s.xml">
+      <configuration name="TestRedisIpam_RequestAddress in ipam_test.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestRedisIpam_RequestAddress_in_ipam_test_go - 2017.12.18 at 21h 55m 24s.xml">
       <configuration name="TestRedisIpam_RequestAddress in ipam_test.go" configurationId="GoTestRunConfiguration" />
     </history-entry>
   </component>
@@ -347,7 +282,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20362474" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -373,7 +308,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/ipams/ipam.go</url>
+          <line>51</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -426,7 +369,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/errors.go">
+    <entry file="file://$PROJECT_DIR$/cache/errors.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -434,7 +377,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/keys.go">
+    <entry file="file://$PROJECT_DIR$/cache/keys.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="4" column="5" lean-forward="false" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
@@ -442,7 +385,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/queue.go">
+    <entry file="file://$PROJECT_DIR$/cache/queue.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
@@ -482,22 +425,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/dao.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="27" lean-forward="false" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ipams/ipam_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Go/src/encoding/json/decode.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -506,45 +433,89 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cache/connect.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="24" column="26" lean-forward="true" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cache/bitmap.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="5" lean-forward="false" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/dao.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ipams/utils.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="18" column="20" lean-forward="false" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ipams/errors.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="16" />
+          <folding>
+            <element signature="e#15#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cache/connect_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <folding>
+            <element signature="e#15#79#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Go/src/net/ip.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="444" column="0" lean-forward="false" selection-start-line="444" selection-start-column="0" selection-end-line="444" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/models/pool.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="38" column="22" lean-forward="true" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+        <state relative-caret-position="318">
+          <caret line="34" column="18" lean-forward="false" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ipams/ipam_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ipams/ipam.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="755">
-          <caret line="57" column="23" lean-forward="true" selection-start-line="56" selection-start-column="19" selection-end-line="57" selection-end-column="23" />
+        <state relative-caret-position="589">
+          <caret line="70" column="18" lean-forward="false" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
           <folding>
-            <element signature="e#14#105#0" expanded="true" />
+            <element signature="e#15#104#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/bitmap.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="34" lean-forward="false" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/connect.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="47" column="1" lean-forward="true" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/connect_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>

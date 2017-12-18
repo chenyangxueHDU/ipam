@@ -2,7 +2,7 @@ package models
 
 import (
 	"net"
-	"ipam/common"
+	"ipam/cache"
 	"fmt"
 	"encoding/json"
 	"github.com/garyburd/redigo/redis"
@@ -32,19 +32,19 @@ func NewPoolInfoDao() PoolInfoDao {
 }
 
 func (dao *poolInfoDao) Insert(pool *PoolInfo) error {
-	conn := common.GetConn()
+	conn := cache.GetConn()
 	defer conn.Close()
 
 	bs, _ := json.Marshal(pool)
-	_, err := conn.Do(`SET`, fmt.Sprintf(common.KeyPoolInfo, pool.ID), bs)
+	_, err := conn.Do(`SET`, fmt.Sprintf(cache.KeyPoolInfo, pool.ID), bs)
 	return err
 }
-func (dao *poolInfoDao) Get(id int) (*PoolInfo, error) {
-	conn := common.GetConn()
+func (dao *poolInfoDao) Get(id string) (*PoolInfo, error) {
+	conn := cache.GetConn()
 	defer conn.Close()
 	info := new(PoolInfo)
 
-	s, err := redis.String(conn.Do(`GET`, fmt.Sprintf(common.KeyPoolInfo, id)))
+	s, err := redis.String(conn.Do(`GET`, fmt.Sprintf(cache.KeyPoolInfo, id)))
 	if err != nil {
 		return nil, err
 	}

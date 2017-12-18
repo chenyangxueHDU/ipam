@@ -1,4 +1,4 @@
-package ipam
+package ipams
 
 import (
 	"net"
