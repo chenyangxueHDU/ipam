@@ -1,7 +1,7 @@
 package models
 
-type PoolDataDao interface {
-	Insert(pool *PoolData)
-	Get(id int) *PoolData
-	GetAll() []*PoolData
+type PoolInfoDao interface {
+	Insert(pool *PoolInfo) error
+	Get(id int) (*PoolInfo, error)
+	GetAll() []*PoolInfo
 }

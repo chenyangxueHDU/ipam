@@ -1,17 +1,18 @@
-package redis
+package common
 
 import "github.com/garyburd/redigo/redis"
 
-func rpush(args ...interface{}) error {
-	conn := getConn()
+// Push key,val1,val2
+func Push(args ...interface{}) error {
+	conn := GetConn()
 	defer conn.Close()
 
 	_, err := conn.Do(`RPUSH`, args...)
 	return err
 }
 
-func lpop(key string) (int, error) {
-	conn := getConn()
+func Pop(key string) (int, error) {
+	conn := GetConn()
 	defer conn.Close()
 
 	return redis.Int(conn.Do(`LPOP`, key))

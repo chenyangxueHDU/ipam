@@ -1,38 +1,57 @@
 package models
 
-import "net"
+import (
+	"net"
+	"ipam/common"
+	"fmt"
+	"encoding/json"
+	"github.com/garyburd/redigo/redis"
+)
 
-type PoolData struct {
+type PoolInfo struct {
 	ID           string
 	NumAddresses int
 	IP           string
 	Mask         string
 }
 
-type poolDataDao struct{}
+type poolInfoDao struct{}
 
-func NewPoolData(nw *net.IPNet) *PoolData {
+func NewPoolInfo(nw *net.IPNet) *PoolInfo {
 	ones, bits := nw.Mask.Size()
-	return &PoolData{
+	return &PoolInfo{
 		ID:           nw.String(),
-		NumAddresses: int(1 << uint(bits-ones)),
+		NumAddresses: int(1<<uint(bits-ones)) - 2, //ip地址个数，全0全1不分配
 		IP:           nw.IP.String(),
 		Mask:         nw.Mask.String(),
 	}
 }
 
-func NewPoolDataDao() PoolDataDao {
-	return &poolDataDao{}
+func NewPoolInfoDao() PoolInfoDao {
+	return &poolInfoDao{}
 }
 
-func (dao *poolDataDao) Insert(pool *PoolData) {
+func (dao *poolInfoDao) Insert(pool *PoolInfo) error {
+	conn := common.GetConn()
+	defer conn.Close()
 
+	bs, _ := json.Marshal(pool)
+	_, err := conn.Do(`SET`, fmt.Sprintf(common.KeyPoolInfo, pool.ID), bs)
+	return err
 }
-func (dao *poolDataDao) Get(id int) *PoolData {
+func (dao *poolInfoDao) Get(id int) (*PoolInfo, error) {
+	conn := common.GetConn()
+	defer conn.Close()
+	info := new(PoolInfo)
 
-	return nil
+	s, err := redis.String(conn.Do(`GET`, fmt.Sprintf(common.KeyPoolInfo, id)))
+	if err != nil {
+		return nil, err
+	}
+
+	return info, json.Unmarshal([]byte(s), info)
 }
-func (dao *poolDataDao) GetAll() []*PoolData {
+func (dao *poolInfoDao) GetAll() []*PoolInfo {
 
 	return nil
 }

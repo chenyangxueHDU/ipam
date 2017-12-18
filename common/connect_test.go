@@ -1,4 +1,4 @@
-package redis
+package common
 
 import (
 	"testing"
@@ -7,14 +7,14 @@ import (
 )
 
 func TestGetConn(t *testing.T) {
-	conn := getConn()
+	conn := GetConn()
 	if conn == nil {
 		t.Fail()
 	}
 
-	conn.Do(`set`, `hello`, `world`)
+	conn.Do(`set`, `d`, []byte{1,0,0})
 
-	s, e := redis.String(conn.Do(`get`, `hello`))
+	s, e := redis.String(conn.Do(`get`, `d`))
 
 	fmt.Printf(`%s,%v`, s, e)
 }

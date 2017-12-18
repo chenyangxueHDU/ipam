@@ -1,4 +1,4 @@
-package redis
+package common
 
 import "errors"
 

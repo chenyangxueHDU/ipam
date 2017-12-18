@@ -1,4 +1,4 @@
-package redis
+package common
 
 import (
 	"github.com/garyburd/redigo/redis"
@@ -30,10 +30,19 @@ func init() {
 	}
 }
 
-func getConn() redis.Conn {
+func GetConn() redis.Conn {
 	conn := pool.Get()
 	if conn.Err() != nil {
 		return nil
 	}
 	return conn
+}
+
+func ExistsKey(key string) (bool, error) {
+	conn := GetConn()
+	defer conn.Close()
+
+	i, e := redis.Int(conn.Do(`EXISTS`, key))
+
+	return i != 0, e
 }
